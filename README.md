@@ -1,5 +1,7 @@
 # Do-it-yourself crypto
 
+<mark>Gör git commit, add och push efter varje steg/deluppgift. Detta är obligatoriskt.</mark>
+
 Mål med övningen:
 - Bekanta sig med kryptering
 - Repetera olika programmeringskoncept
@@ -28,7 +30,7 @@ Förslag: begränsa dig till engelska meddelanden, ALL CAPS och utan mellanslag.
 
 ## Fördjupning
 
-1. Fundera på hur man kan knäcka ett caesar-shiffer. Kan du skriva en funktion som kan hjälpa dig med det? Kan du komma på flera olika sätt att göra detta?
+1. Fundera på hur man kan knäcka ett caesar-chiffer. Kan du skriva en funktion som kan hjälpa dig med det? Kan du komma på flera olika sätt att göra detta?
 
 Vad finns bakom `GJSNHJYTJFHMTYMJWFSIYMJUQFSJYUQJFXJ`? :)
 
@@ -50,11 +52,14 @@ Brute-forcea (googla på vad det betyder om du inte vet). Gör en loop som testa
 </details>
 <br>
 
-2. Importera funktionerna `import { readFileSync, writeFileSync } from 'fs'` i main.js. Använd de `const text = readFileSync(fileName, { encoding: 'utf8' })` för att läsa in ett meddelande från en textfil istället. Och spara till en ny fil.
+2. Låt din implementation av caesarchiffret vara. Kan du komma på och implementera en ny, förbättrad, krypteringsalgoritm som inte lider av samma svagheter som ovan, eller som i alla fall gör det svårare att knäcka? Kom ihåg att både implementera kryptering och avkryptering så att du verkligen vet att det fungerar.
+
 
 3. Kolla upp vad **one-time pads** är för något. Det är ett mycket säkert sätt att kryptera ett meddelande, men det har en nackdel, vad? Försök att implementera kryptering med one-time-pad!
 
-4. Refaktorisera `diycrypto.js` så att den inte använder for-loopar, utan istället använder `map`.
+4. Importera funktionerna `import { readFileSync, writeFileSync } from 'fs'` i main.js. Använd de `const text = readFileSync(fileName, { encoding: 'utf8' })` för att läsa in ett meddelande från en textfil istället. Och spara till en ny fil.
+
+5. Refaktorisera `diycrypto.js` så att den inte använder for-loopar, utan istället använder `map`.
 
 <details>
 <summary>Lösning</summary>
@@ -71,8 +76,8 @@ export const encrypt = (msg, shift) => msg
 
 <br>
 
-5. Kolla upp hur man använder JsDocs i VSCode. Lägg till JsDocs-kommentarer till dina funktioner i `diycrypto.js` med korrekta typer på parametrarna, så att du får bättre intellisense när du importerar funktionerna.
+6. Kolla upp hur man använder JsDocs i VSCode. Lägg till JsDocs-kommentarer till dina funktioner i `diycrypto.js` med korrekta typer på parametrarna, så att du får bättre intellisense när du importerar funktionerna.
 
-6. Utforska de inbyggda krypteringsbiblioteken i [nodejs officiella krypto-bibliotek](https://nodejs.org/docs/latest-v14.x/api/crypto.html).
+7. Utforska de inbyggda krypteringsbiblioteken i [nodejs officiella krypto-bibliotek](https://nodejs.org/docs/latest-v14.x/api/crypto.html).
 
-7. Gör vad du vill.
+8. Gör vad du vill. Ät frukt.

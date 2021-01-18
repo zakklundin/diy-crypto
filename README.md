@@ -49,6 +49,7 @@ Skriv en funktion som klarar av att räkna ut de vanligaste tecknen i en text. A
 Brute-forcea (googla på vad det betyder om du inte vet). Gör en loop som testar massor av nycklar (shifts). Skriv ut i en lista.
 </details>
 <br>
+
 2. Importera funktionerna `import { readFileSync, writeFileSync } from 'fs'` i main.js. Använd de `const text = readFileSync(fileName, { encoding: 'utf8' })` för att läsa in ett meddelande från en textfil istället. Och spara till en ny fil.
 
 3. Kolla upp vad one-time pads är för något. Det är ett mycket säkert sätt att kryptera ett meddelande, men det har en nackdel, vad? Försök att implementera kryptering med one-time-pad!

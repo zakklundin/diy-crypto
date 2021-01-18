@@ -1,8 +1,5 @@
-
 //Refakrotisera = städa, omorganisera kod utan att ändra funtionalitet
-
-
-function caesarEncrypt(msg) {
+function caesarEncrypt(msg, shift) {
 
     // 1. översätta varje tecken till ett nummer
     const charCodes = []
@@ -13,7 +10,7 @@ function caesarEncrypt(msg) {
 
     // 2. shifta det numret
     for (let i = 0; i < charCodes.length; i++) {
-        charCodes[i] = charCodes[i] + 1
+        charCodes[i] = charCodes[i] + shift
     }
 
     let result = ""
@@ -24,8 +21,29 @@ function caesarEncrypt(msg) {
     return result
 }
 
-const secretMessage = "ATTACKATSEVEN"
-const encryptedMessage = caesarEncrypt(secretMessage)
 
-console.log(secretMessage)
-console.log(encryptedMessage)
+function caesarDecrypt(encryptedMsg, shift){
+    const charCodes = []
+    for (let i = 0; i < encryptedMsg.length; i++) {
+        charCodes.push(encryptedMsg[i].charCodeAt(0))
+    }
+
+    // 2. shifta det numret
+    for (let i = 0; i < charCodes.length; i++) {
+        charCodes[i] = charCodes[i] - shift //-
+    }
+
+    let result = ""
+    // 3. översätta  numret till tecken, charCode till string
+    for (let i = 0; i < charCodes.length; i++) {
+        result = result + String.fromCharCode(charCodes[i])
+    }
+    return result
+}
+
+
+const secretMessage = "ATTACKATSEVEN"
+const encryptedMessage = caesarEncrypt(secretMessage, 2)
+const decryptedMessage = caesarDecrypt(encryptedMessage, 2)
+
+console.log(secretMessage, encryptedMessage, decryptedMessage)

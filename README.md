@@ -55,7 +55,7 @@ Brute-forcea (googla på vad det betyder om du inte vet). Gör en loop som testa
 2. Låt din implementation av caesarchiffret vara. Kan du komma på och implementera en ny, förbättrad, krypteringsalgoritm som inte lider av samma svagheter som ovan, eller som i alla fall gör det svårare att knäcka? Kom ihåg att både implementera kryptering och avkryptering så att du verkligen vet att det fungerar.
 
 
-3. Kolla upp vad **one-time pads** är för något. Det är ett mycket säkert sätt att kryptera ett meddelande, men det har en nackdel, vad? Försök att implementera kryptering med one-time-pad!
+3. Kolla upp vad [one-time pad](https://www.youtube.com/watch?v=FlIG3TvQCBQ&list=PLSQl0a2vh4HA50QhFIirlEZRXG4yjcoGM&index=9) är för något. Det är ett mycket säkert sätt att kryptera ett meddelande, men det har en nackdel, vad? Försök att implementera kryptering med one-time-pad!
 
 4. Importera funktionerna `import { readFileSync, writeFileSync } from 'fs'` i main.js. Använd de `const text = readFileSync(fileName, { encoding: 'utf8' })` för att läsa in ett meddelande från en textfil istället. Och spara till en ny fil.
 

@@ -18,14 +18,14 @@ Förslag: begränsa dig till engelska meddelanden, ALL CAPS och utan mellanslag.
 1. Skapa en fil `main.js`. I den, implementera Caesar-chiffer med shift 1 med hjälp av for-loopar.
 `ILOVEYOULISA` ska bli `JMPWFZPVMJTB`.
 
-2. Refaktorisera din kod (googla på vad *refaktorisera* betyder) genom att flytta in looparna i en funktion `encrypt(message, shift)`. Definiera även en motsvarande avkrypteringsfunktion `decrypt(encryptedMessage, shift)`. Testa olika meddelanden och bekräfta att koden fortfarande fungerar!
+2. Refaktorisera din kod (googla på vad *refaktorisera* betyder) genom att flytta in looparna i en funktion `caesarEncrypt(message, shift)`. Definiera även en motsvarande avkrypteringsfunktion `caesarDecrypt(encryptedMessage, shift)`. Testa olika meddelanden och bekräfta att koden fortfarande fungerar!
 
 3. Programmerare vill ofta modularisera sin kod, dvs. man vill bryta ut funktionalitet i olika mindre filer. Det ger bättre organisation och ökar möjligheten att återanvända koden i olika sammanhang.
    1. Skapa en ny fil `diycrypto.js`. Lägg funktionerna där.
    2. Vi ska nu göra det möjligt att importera och exportera funktionerna. Skapa en `package.json` fil genom att i terminalen köra `npm init` (OBS: Se till att du står i samma mapp)
    3. Gå in i filen `package.json` och lägg till ett fält `type` som ska ha värdet `module`.
    4. Gå in i filen `diycrypto.js`. Skriv `export` framför funktionsnamet.
-   5. Gå in i `main.js`. Ta bort allt innehåll. Skriv `import { encrypt, decrypt } from "diycrypto.js"`
+   5. Gå in i `main.js`. Ta bort allt innehåll. Skriv `import { caesarEncrypt, caesarDecrypt } from "diycrypto.js"`
    6. Testa att använda funktionerna `encrypt` och `decrypt` i filen `main.js`, bekräfta att det fortfarande fungerar. Grattis i så fall!
 
 ## Fördjupning
@@ -59,13 +59,13 @@ Brute-forcea (googla på vad det betyder om du inte vet). Gör en loop som testa
 
 4. Importera funktionerna `import { readFileSync, writeFileSync } from 'fs'` i main.js. Använd de `const text = readFileSync(fileName, { encoding: 'utf8' })` för att läsa in ett meddelande från en textfil istället. Och spara till en ny fil.
 
-5. Refaktorisera `diycrypto.js` så att den inte använder for-loopar, utan istället använder `map`.
+5. Refaktorisera `diycrypto.js` så att den inte använder for-loopar, utan istället använder `map`. Prova även att använda arrow functions för att korta ner koden ytterligare.
 
 <details>
 <summary>Lösning</summary>
 
 ````javascript
-export const encrypt = (msg, shift) => msg
+export const caesarEncrypt = (msg, shift) => msg
     .split()
     .map(ch => ch.codePointAt(0))
     .map(x => x + shift)

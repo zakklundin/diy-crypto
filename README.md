@@ -26,7 +26,7 @@ Förslag: begränsa dig till engelska meddelanden, ALL CAPS och utan mellanslag.
    3. Gå in i filen `package.json` och lägg till ett fält `type` som ska ha värdet `module`.
    4. Gå in i filen `diycrypto.js`. Skriv `export` framför funktionsnamet.
    5. Gå in i `main.js`. Ta bort allt innehåll. Skriv `import { caesarEncrypt, caesarDecrypt } from "diycrypto.js"`
-   6. Testa att använda funktionerna `encrypt` och `decrypt` i filen `main.js`, bekräfta att det fortfarande fungerar. Grattis i så fall!
+   6. Testa att använda funktionerna `caesarEncrypt` och `caesarDecrypt` i filen `main.js`, bekräfta att det fortfarande fungerar. Grattis i så fall!
 
 ## Fördjupning
 

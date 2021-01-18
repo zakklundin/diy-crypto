@@ -52,7 +52,7 @@ Brute-forcea (googla på vad det betyder om du inte vet). Gör en loop som testa
 
 2. Importera funktionerna `import { readFileSync, writeFileSync } from 'fs'` i main.js. Använd de `const text = readFileSync(fileName, { encoding: 'utf8' })` för att läsa in ett meddelande från en textfil istället. Och spara till en ny fil.
 
-3. Kolla upp vad one-time pads är för något. Det är ett mycket säkert sätt att kryptera ett meddelande, men det har en nackdel, vad? Försök att implementera kryptering med one-time-pad!
+3. Kolla upp vad **one-time pads** är för något. Det är ett mycket säkert sätt att kryptera ett meddelande, men det har en nackdel, vad? Försök att implementera kryptering med one-time-pad!
 
 4. Refaktorisera `diycrypto.js` så att den inte använder for-loopar, utan istället använder `map`.
 

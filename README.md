@@ -68,7 +68,9 @@ export const encrypt = (msg, shift) => msg
     .join('')
 ````
 </details>
+
 <br>
+
 5. Kolla upp hur man använder JsDocs i VSCode. Lägg till JsDocs-kommentarer till dina funktioner i `diycrypto.js` med korrekta typer på parametrarna, så att du får bättre intellisense när du importerar funktionerna.
 
 6. Utforska de inbyggda krypteringsbiblioteken i [nodejs officiella krypto-bibliotek](https://nodejs.org/docs/latest-v14.x/api/crypto.html).
